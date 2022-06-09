@@ -21,4 +21,8 @@ referências:
 
 -https://www.hashtagtreinamentos.com/listas-no-python#:~:text=Outra%20forma%20de%20criar%20uma,as%20informa%C3%A7%C3%B5es%20em%20uma%20lista.&text=J%C3%A1%20no%20exemplo%20a%20seguir,print%20de%20cada%20um%20deles.
 
+CFBcursos youtube
+
+Salve especial para o Cléo e Luana do robotron e aos demais que estão sempre dando uma força.
+
 feito por: Rodrigo Alves da Silva 
