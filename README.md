@@ -5,7 +5,7 @@ Repositório para o challenge da sprint4 do programa de bolsas compass uol
 
 Os códigos foram desenvolvidos em python 3
 
-Acesse a Branch DEVELOP para ter acesso aos repostiórios: exercícios_dia5 e exercícios_dia7
+Acesse a Branch DEVELOP para ter acesso aos repostiórios: Sprint4_dia5 e Sprint4_dia7
 
 para executar os codigos: 
 
