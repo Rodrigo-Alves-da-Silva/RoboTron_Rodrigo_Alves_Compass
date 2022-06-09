@@ -1,17 +1,16 @@
-# RoboTron_Rodrigo_Alves_Compass
 Sprint 4 compass
 
 Repositório para o challenge da sprint4 do programa de bolsas compass uol
 
 Os códigos foram desenvolvidos em python 3
 
-Acesse a Branch DEVELOP para ter acesso às branches: exercícios_dia5 e exercícios_dia7
+Acesse a Branch DEVELOP para ter acesso aos repostiórios: Sprint4_dia5 e Sprint4_dia7
 
-para executar os codigos: 
+para executar os codigos:
 
--sua máquina deve possuir  interpretador de python3.
+-sua máquina deve possuir interpretador de python3.
 
--faça o download e execute em seu computador.   
+-faça o download e execute em seu computador.
 
 referências:
 
@@ -21,4 +20,8 @@ referências:
 
 -https://www.hashtagtreinamentos.com/listas-no-python#:~:text=Outra%20forma%20de%20criar%20uma,as%20informa%C3%A7%C3%B5es%20em%20uma%20lista.&text=J%C3%A1%20no%20exemplo%20a%20seguir,print%20de%20cada%20um%20deles.
 
-feito por: Rodrigo Alves da Silva 
+CFBcursos youtube
+
+Salve especial para o Cléo e Luana do robotron e aos demais que estão sempre dando uma força.
+
+feito por: Rodrigo Alves da Silva
