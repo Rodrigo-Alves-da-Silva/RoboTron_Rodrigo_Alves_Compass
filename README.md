@@ -1,7 +1,8 @@
-Sprint 4 compass
+Repositório para atividades dos sprints dos programa de bolsas compass uol
 
-Repositório para o challenge da sprint4 do programa de bolsas compass uol
+Exitem 2 branchs: branch DEVELOP referente à sprint 4 e branch Robot referente à sprint 5. 
 
+# Branch DEVELOP
 Os códigos foram desenvolvidos em python 3
 
 Acesse a Branch DEVELOP para ter acesso aos repositórios: Sprint4_dia5 e Sprint4_dia7
@@ -25,4 +26,6 @@ CFBcursos youtube
 Salve especial para o Cléo e Luana do robotron e aos demais que estão sempre dando uma força.
 
 feito por: Rodrigo Alves da Silva
+
+# Branch Robot
 
