@@ -1,0 +1,175 @@
+#Casos de teste na API SERVEREST
+
+###/LOGIN###
+
+POST - Fazer login com sucesso na SERVEREST
+- Dados válidos
+- Ter um usuário cadastrado
+- A requisição deve voltar um status 200
+
+POST - Fazer Login com E-mail e/ou senha inválidos de um usuário cadastrado
+- Dados invalidos
+- Ter um usuário cadastrado
+- A requisição deve voltar um status 400
+
+POST - Fazer Login com E-mail e/ou senha na API SERVEREST
+- Utilizar dados inválidos
+- Não pode estar cadastrado 
+- A requisição deve voltar um status 400
+
+###/USUÁRIOS###
+
+GET - No endpoint /usuarios da api ServeRest deve listar todos os usuários
+- Mostrar todos os usuários cadastrados na aplicação
+- A requisição deve voltar um status 200
+
+GET - No endpoint /usuarios da api ServeRest deve verificar a quantidade de usuários cadastrados
+- Calcular o total de usuários cadastrados
+- A requisição deve voltar um status 200
+
+GET - Buscar um usuário cadastrado utilizand o seu id
+- Dados validos
+- O usuário deve está cadastrado
+- A requisição deve voltar um status 200
+
+GET - Buscar um usuário utilizando um id errado
+- Dados invalidos
+- O usuário deve está cadastrados
+- A requisição deve voltar um status 400
+
+POST - Criar um usuário novo dentro da api ServeRest
+- Dados válidos
+- O usuário não deve estar cadastrado
+- O usuário deve ter e-mail e senha
+- A requisição deve voltar um status 201
+
+POST - Criar um usuário com um email já cadastrado
+- criar um usuario com um email de um usuário já cadastrado
+- A requisição deve voltar um status 400
+
+POST - Tentar criar um usuário com dados invalidos na API ServeRest em /usuarios
+- Utilizar dados inválidos no cadastrados
+- O usuário pode já estar cadastrado
+- A requisição deve voltar um status 400
+
+PUT - Editar usuário com o id "0uxuPY0cbmQhpEz1"
+- Utilizar dados válidos para edição
+- Precisa ter certeza que o usuário já está cadastrado
+- a requisição deve voltar um status 200
+
+PUT - Editar usuário com id não cadastrado
+- Precisa ter certeza que o usuário ainda não está cadastrado
+- Utilizar dados válidos
+- utilizar id não cadastrado
+- A requsição deve voltar um status 201
+
+PUT - Editar o email de um usuário
+- Utilzar Dados válidos
+- Utilizar um email já cadastrado
+- A requisição deve voltar um status 400
+
+DELETE - Excluir o usuário com id 0uxuPY0cbmQhpEz1
+-Validar que o usuário com id 0uxuPY0cbmQhpEz1 existe
+- O usuário com id 0uxuPY0cbmQhpEz1 não deve ter um carrinho cadastrado
+-a requisição deve voltar um status 200
+
+DELETE - Excluir um usuário com um id inválido
+- dados inválidos
+-a requisição deve voltar um status 200
+
+DELETE - Tentar excluir usuário com carrinho cadastrado
+- Validar que o usuário com id 0uxuPY0cbmQhpEz1 existe
+- O usuário deve está com um carrinho cadastrado
+- A requisição deve voltar um status 400
+
+###/PRODUTOS###
+
+GET - No endpoint /produtos da api ServeRest deve listar todos os produtos
+- Mostrar todos os produtos cadastrados na aplicação
+- A requisição deve voltar um status 200
+
+GET - No endpoint /produtos da api ServeRest deve verificar a quantidade de produtos cadastrados
+- Calcular o total de produtos cadastrados
+- A requisição deve voltar um status 200
+
+POST - Cadastrar um novo produto dentro da api ServeRest
+- Dados válidos
+- O produto não deve estar cadastrado
+- A requisição deve voltar um status 201
+
+POST - Cadastrar produto com um nome já cadastrado
+- utilizar dados válidos de produtos já cadastrados
+- A requisição deve voltar um status 400
+
+POST - 	Token ausente, inválido ou expirado
+- utilizar dados inválidos
+- A requisição deve voltar um status 401
+
+POST - Acessar rota de administadores
+- A requisição deve voltar m status 403
+
+GET - Buscar um produto cadastrado utilizando o seu id
+- Dados validos
+- O produto deve está cadastrado
+- A requisição deve voltar um status 200
+
+GET - Buscar um produto utilizando um id errado
+- Dados invalidos
+- O produto deve está cadastrados
+- A requisição deve voltar um status 400
+
+
+PUT - Editar produto com o id "0uxuPY0cbmQhpEz1"
+- Utilizar dados válidos para edição
+- Precisa ter certeza que o produto já está cadastrado
+- a requisição deve voltar um status 200
+
+PUT - Editar produto com id não cadastrado
+- Precisa ter certeza que o produto ainda não está cadastrado
+- Utilizar dados válidos
+- utilizar id não cadastrado
+- A requsição deve voltar um status 201
+
+PUT - Editar o nome de um produto
+- Utilzar Dados válidos
+- Utilizar um nome já cadastrado
+- A requisição deve voltar um status 400
+
+PUT - 	Token ausente, inválido ou expirado
+- utilizar dados inválidos
+- A requisição deve voltar um status 401
+
+PUT - Acessar rota de administadores
+- A requisição deve voltar um status 403
+
+DELETE - Excluir produto com id 0uxuPY0cbmQhpEz1
+-Validar que o produto com id 0uxuPY0cbmQhpEz1 existe
+- O produto com id 0uxuPY0cbmQhpEz1 não deve estar em um carrinho
+-a requisição deve voltar um status 200
+
+DELETE - Excluir um produto com um id inválido
+- dados inválidos
+-a requisição deve voltar um status 200
+
+DELETE - Excluir produto com id 0uxuPY0cbmQhpEz1
+-Validar que o produto com id 0uxuPY0cbmQhpEz1 existe
+- O produto com id 0uxuPY0cbmQhpEz1 deve estar em um carrinho
+-a requisição deve voltar um status 400
+
+DELETE - Tentar excluir usuário com carrinho cadastrado
+- Validar que o usuário com id 0uxuPY0cbmQhpEz1 existe
+- O usuário deve está com um carrinho cadastrado
+- A requisição deve voltar um status 400
+
+DELETE - 	Token ausente, inválido ou expirado
+- utilizar dados inválidos
+- A requisição deve voltar um status 401
+
+DELETE - Acessar rota de administadores
+- A requisição deve voltar um status 403
+
+
+
+
+
+
