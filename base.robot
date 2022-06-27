@@ -2,6 +2,11 @@
 * Settings *
 #Documentation   Arquivo Simples para requisições HTTP em APIs
 Library         RequestsLibrary
+Resource    ./usuarios_keywords.robot
+Resource    ./login_keywords.robot
+Resource    ./produtos_keywords.robot
+#Resource    ./commom.robot
+#Resource    ./commom.robot
 
 
 
@@ -39,6 +44,35 @@ Cenario: DELETE Endpoint /usuarios 200
     Delete Endpoint /usuarios
     Validar Status Code "200"
 
+Cenario: POST Realizar Login 200
+    [tags]  POSTLOGIN
+    Criar Sessao
+    POST Endpoint /login
+    Validar Status Code "200"
+
+Cenario: POST Criar Produto 201
+    [tags]  POSTPRODUTO
+    Criar Sessao
+    Fazer Login e Armazenar Token
+    POST Endpoint /produtos
+    Validar Status Code "201"
+
+Cenario: DELETE Excluir Produto 200
+    [tags]  DELETEPRODUTO
+    Criar Sessao
+    Fazer Login e Armazenar Token
+    Criar Um Produto e Armazenar ID
+    DELETE Endpoint /produtos
+    Validar Status Code "200"
+
+Cenario: POST Criar Usuario De Massa Estatica 201
+    [tags]  POSTCUE
+    Criar Sessao
+    Criar Usuario Estatico Valido
+    Validar Status Code "201"
+
+
+
 
 
 
@@ -50,42 +84,17 @@ Cenario: DELETE Endpoint /usuarios 200
 Criar Sessao
     Create Session  serverest   http://localhost:3000
 
-GET Endpoint /usuarios
-    ${response}         GET On Session  serverest   /usuarios
-    Set Global Variable  ${response}
-
-POST Endpoint /usuarios
-    &{payload}  Create Dictionary   nome=jaaagrbos priest   email=tgtrtbatsetst1s11421@gmail.com  password=123    administrador=true
-    ${response}         POST On Session  serverest   /usuarios  data=&{payload}
-    Log to Console      Response: ${response.content}
-    Set Global Variable     ${response}
-
-PUT Endpoint /usuarios
-    &{payload}      Create Dictionary   nome=juauba padre   email=twest125sl@gmail.com  password=123    administrador=true
-    ${response}     PUT On Session  serverest   /usuarios/JFDaN6vcvWBfcXQA   data=&{payload}
-    Log to Console  Response: ${response.content}
-    Set Global variable    ${response}
-
-Delete Endpoint /usuarios
-    ${response}         Delete On Session  serverest   /usuarios/wmzxESqQAka3YbmL
-    Log to Console      Response: ${response.content}
-    Set Global Variable     ${response} 
-
-
-Validar Status Code "${statuscode}"
-    Should Be True  ${response.status_code} == ${statuscode}  
-
-Validar Quantidade "${quantidade}"
-    Should Be Equal     ${response.json()["quantidade"]}    ${quantidade}
-
-Validar Se Mensagem Contem "${palavra}"
-    Should Contain  ${response.json()["message"]}   ${palavra}
+#Validar Se Mensagem Contem "${palavra}"
+ #   Should Contain  ${response.json()["message"]}   ${palavra}
 
 #Printar Conteudo Response
-   # Log to Console      Response: ${response.json()["usuarios"][0]["nome"]}
+ #   Log to Console      Response: ${response.json()["usuarios"][0]["nome"]} // para listar o nome do usuario na posição 0
 
-Printar Conteudo Response
-    Log to Console      Response: ${response.json()["usuarios"]}
+
+### para listar os dados de todos os usuarios cadastrados no get/usuarios
+
+#Printar Conteudo Response 
+    #Log to Console      Response: ${response.json()["usuarios"]} 
 
     
                
