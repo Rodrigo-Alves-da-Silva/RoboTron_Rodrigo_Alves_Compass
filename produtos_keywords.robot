@@ -1,5 +1,5 @@
 *Settings*
-Documentation   Keywords e variaveis para ações do endpoint de Produtos
+Documentation   Keywords e variaveis /produtos
 
 *Variables*
 #${token_auth}   Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlbG9naW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJpYXQiOjE2NTYzMDgyMDUsImV4cCI6MTY1NjMwODgwNX0.W9YgnOGhhkpGlsE2QqXfvTYgge02FU7EwG-4NLHrzf4
@@ -7,7 +7,7 @@ Documentation   Keywords e variaveis para ações do endpoint de Produtos
 *Keywords*
 POST Endpoint /produtos
         &{header}       Create dictionary       Authorization=${token_auth}
-        &{payload}      Create Dictionary       nome=Tecladopcdomilhao  preco=470       descricao=Razer21         quantidade=100 
+        &{payload}      Create Dictionary       nome=pcdomilhao12345  preco=470       descricao=positivo         quantidade=100 
         ${response}     POST On Session  serverest  /produtos  data=&{payload}      headers=${header}
         Log to Console  Response: ${response.content}
         Set Global Variable     ${response}

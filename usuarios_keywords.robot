@@ -1,6 +1,7 @@
 *Settings*
-Documentation   Keywords e Variaveis para o endpoint de Usuarios
+Documentation   keywords e variaveis /usuarios
 Resource        ./commom.robot
+Resource        ./dynamics.robot
 
 * Variables *
 #${nome_do_usuario}  herbet richards
@@ -40,10 +41,15 @@ Validar Se Mensagem Contem "${palavra}"
     Should Contain  ${response.json()["message"]}   ${palavra}
 
 Printar Conteudo Response
-    Log to Console      Response: ${response.json()["usuarios"][0]["nome"]} // para listar o nome do usuario na posição 0
+    Log to Console      Response: ${response.json()["usuarios"]} 
 
-Criar Usuario Estatico Valido
+Cadastrar Usuario Estatico Valido
     ${json}   Importar JSON Estatico  json_usuario_ex.json
-    ${payload}  Set Variable     ${json["user_invalido"]}
+    ${payload}  Set Variable     ${json["user_valido"]}
+    Set Global Variable     ${payload}
+    POST Endpoint /usuarios
+
+Cadastrar Usuario Dinamico Valido
+    ${payload}  Criar Dados Usuario Valido
     Set Global Variable     ${payload}
     POST Endpoint /usuarios
